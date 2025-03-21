@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibelleseplan - 120 Tage</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .completed {
+            background-color: #e0ffe0;
+            text-decoration: line-through;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bibelleseplan: 120 Tage</h1>
+    <p><strong>Ziel:</strong> Altes Testament (AT) 1x (929 Kapitel), Neues Testament (NT) 2x (520 Kapitel) = 1449 Kapitel</p>
+    <p><strong>Durchschnitt:</strong> ca. 12 Kapitel pro Tag</p>
+    
+    <table id="readingPlan">
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>AT-Lesung</th>
+                <th>Kapitel AT</th>
+                <th>NT-Lesung</th>
+                <th>Kapitel NT</th>
+                <th>Gesamt</th>
+                <th>Erledigt</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Genesis 1-8</td><td>8</td><td>Matthäus 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="1"></td></tr>
+            <tr><td>2</td><td>Genesis 9-16</td><td>8</td><td>Matthäus 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="2"></td></tr>
+            <tr><td>3</td><td>Genesis 17-24</td><td>8</td><td>Matthäus 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="3"></td></tr>
+            <tr><td>4</td><td>Genesis 25-32</td><td>8</td><td>Matthäus 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="4"></td></tr>
+            <tr><td>5</td><td>Genesis 33-40</td><td>8</td><td>Matthäus 17-20</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="5"></td></tr>
+            <tr><td>6</td><td>Genesis 41-48</td><td>8</td><td>Matthäus 21-24</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="6"></td></tr>
+            <tr><td>7</td><td>Genesis 49 - Ex 6</td><td>8</td><td>Matthäus 25-28</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="7"></td></tr>
+            <tr><td>8</td><td>Exodus 7-14</td><td>8</td><td>Markus 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="8"></td></tr>
+            <tr><td>9</td><td>Exodus 15-22</td><td>8</td><td>Markus 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="9"></td></tr>
+            <tr><td>10</td><td>Exodus 23-30</td><td>8</td><td>Markus 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="10"></td></tr>
+            <tr><td>11</td><td>Exodus 31-38</td><td>8</td><td>Markus 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="11"></td></tr>
+            <tr><td>12</td><td>Exodus 39 - Lev 6</td><td>8</td><td>Lukas 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="12"></td></tr>
+            <tr><td>13</td><td>Leviticus 7-14</td><td>8</td><td>Lukas 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="13"></td></tr>
+            <tr><td>14</td><td>Leviticus 15-22</td><td>8</td><td>Lukas 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="14"></td></tr>
+            <tr><td>15</td><td>Leviticus 23 - Num 2</td><td>8</td><td>Lukas 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="15"></td></tr>
+            <tr><td>16</td><td>Numbers 3-10</td><td>8</td><td>Lukas 17-20</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="16"></td></tr>
+            <tr><td>17</td><td>Numbers 11-18</td><td>8</td><td>Lukas 21-24</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="17"></td></tr>
+            <tr><td>18</td><td>Numbers 19-26</td><td>8</td><td>Johannes 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="18"></td></tr>
+            <tr><td>19</td><td>Numbers 27-34</td><td>8</td><td>Johannes 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="19"></td></tr>
+            <tr><td>20</td><td>Numbers 35 - Deut 4</td><td>6</td><td>Johannes 9-12</td><td>4</td><td>10</td><td><input type="checkbox" class="dayCheckbox" data-day="20"></td></tr>
+            <tr><td>21</td><td>Deuteronomy 5-12</td><td>8</td><td>Johannes 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="21"></td></tr>
+            <tr><td>22</td><td>Deuteronomy 13-20</td><td>8</td><td>Johannes 17-21</td><td>5</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="22"></td></tr>
+            <tr><td>23</td><td>Deuteronomy 21-28</td><td>8</td><td>Apostelgeschichte 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="23"></td></tr>
+            <tr><td>24</td><td>Deuteronomy 29-34</td><td>6</td><td>Apostelgeschichte 5-8</td><td>4</td><td>10</td><td><input type="checkbox" class="dayCheckbox" data-day="24"></td></tr>
+            <tr><td>25</td><td>Joshua 1-8</td><td>8</td><td>Apostelgeschichte 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="25"></td></tr>
+            <tr><td>26</td><td>Joshua 9-16</td><td>8</td><td>Apostelgeschichte 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="26"></td></tr>
+            <tr><td>27</td><td>Joshua 17-24</td><td>8</td><td>Apostelgeschichte 17-20</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="27"></td></tr>
+            <tr><td>28</td><td>Judges 1-8</td><td>8</td><td>Apostelgeschichte 21-24</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="28"></td></tr>
+            <tr><td>29</td><td>Judges 9-16</td><td>8</td><td>Apostelgeschichte 25-28</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="29"></td></tr>
+            <tr><td>30</td><td>Judges 17 - Ruth 4</td><td>8</td><td>Römer 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="30"></td></tr>
+            <tr><td>31</td><td>1. Samuel 1-8</td><td>8</td><td>Römer 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="31"></td></tr>
+            <tr><td>32</td><td>1. Samuel 9-16</td><td>8</td><td>Römer 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="32"></td></tr>
+            <tr><td>33</td><td>1. Samuel 17-24</td><td>8</td><td>Römer 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="33"></td></tr>
+            <tr><td>34</td><td>1. Samuel 25-31</td><td>7</td><td>1. Korinther 1-4</td><td>4</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="34"></td></tr>
+            <tr><td>35</td><td>2. Samuel 1-8</td><td>8</td><td>1. Korinther 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="35"></td></tr>
+            <tr><td>36</td><td>2. Samuel 9-16</td><td>8</td><td>1. Korinther 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="36"></td></tr>
+            <tr><td>37</td><td>2. Samuel 17-24</td><td>8</td><td>1. Korinther 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="37"></td></tr>
+            <tr><td>38</td><td>1. Könige 1-8</td><td>8</td><td>2. Korinther 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="38"></td></tr>
+            <tr><td>39</td><td>1. Könige 9-16</td><td>8</td><td>2. Korinther 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="39"></td></tr>
+            <tr><td>40</td><td>1. Könige 17-22</td><td>6</td><td>2. Korinther 9-13</td><td>5</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="40"></td></tr>
+            <tr><td>41</td><td>2. Könige 1-8</td><td>8</td><td>Galater 1-6</td><td>6</td><td>14</td><td><input type="checkbox" class="dayCheckbox" data-day="41"></td></tr>
+            <tr><td>42</td><td>2. Könige 9-16</td><td>8</td><td>Epheser 1-6</td><td>6</td><td>14</td><td><input type="checkbox" class="dayCheckbox" data-day="42"></td></tr>
+            <tr><td>43</td><td>2. Könige 17-24</td><td>8</td><td>Philipper 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="43"></td></tr>
+            <tr><td>44</td><td>2. Könige 25 - 1. Chr 6</td><td>7</td><td>Kolosser 1-4</td><td>4</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="44"></td></tr>
+            <tr><td>45</td><td>1. Chronik 7-14</td><td>8</td><td>1. Thessalonicher 1-5</td><td>5</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="45"></td></tr>
+            <tr><td>46</td><td>1. Chronik 15-22</td><td>8</td><td>2. Thessalonicher 1-3</td><td>3</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="46"></td></tr>
+            <tr><td>47</td><td>1. Chronik 23-29</td><td>7</td><td>1. Timotheus 1-6</td><td>6</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="47"></td></tr>
+            <tr><td>48</td><td>2. Chronik 1-8</td><td>8</td><td>2. Timotheus 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="48"></td></tr>
+            <tr><td>49</td><td>2. Chronik 9-16</td><td>8</td><td>Titus 1-3</td><td>3</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="49"></td></tr>
+            <tr><td>50</td><td>2. Chronik 17-24</td><td>8</td><td>Philemon 1 + Hebräer 1-4</td><td>5</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="50"></td></tr>
+            <tr><td>51</td><td>2. Chronik 25-32</td><td>8</td><td>Hebräer 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="51"></td></tr>
+            <tr><td>52</td><td>2. Chronik 33 - Esra 2</td><td>7</td><td>Hebräer 9-12</td><td>4</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="52"></td></tr>
+            <tr><td>53</td><td>Ezra 3-10</td><td>8</td><td>Hebräer 13 + Jakobus 1-3</td><td>5</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="53"></td></tr>
+            <tr><td>54</td><td>Nehemiah 1-8</td><td>8</td><td>Jakobus 4-5 + 1. Petrus</td><td>5</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="54"></td></tr>
+            <tr><td>55</td><td>Nehemiah 9-13</td><td>5</td><td>2. Petrus 1-3 + 1. Joh</td><td>6</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="55"></td></tr>
+            <tr><td>56</td><td>Esther 1-8</td><td>8</td><td>2. Joh - Judas + Off 1</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="56"></td></tr>
+            <tr><td>57</td><td>Esther 9 - Hiob 6</td><td>8</td><td>Offenbarung 2-5</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="57"></td></tr>
+            <tr><td>58</td><td>Hiob 7-14</td><td>8</td><td>Offenbarung 6-9</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="58"></td></tr>
+            <tr><td>59</td><td>Hiob 15-22</td><td>8</td><td>Offenbarung 10-13</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="59"></td></tr>
+            <tr><td>60</td><td>Hiob 23-30</td><td>8</td><td>Offenbarung 14-17</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="60"></td></tr>
+            <tr><td>61</td><td>Hiob 31-38</td><td>8</td><td>Offenbarung 18-22</td><td>5</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="61"></td></tr>
+            <tr><td>62</td><td>Hiob 39 - Psalm 6</td><td>8</td><td>Matthäus 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="62"></td></tr>
+            <tr><td>63</td><td>Psalm 7-14</td><td>8</td><td>Matthäus 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="63"></td></tr>
+            <tr><td>64</td><td>Psalm 15-22</td><td>8</td><td>Matthäus 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="64"></td></tr>
+            <tr><td>65</td><td>Psalm 23-30</td><td>8</td><td>Matthäus 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="65"></td></tr>
+            <tr><td>66</td><td>Psalm 31-38</td><td>8</td><td>Matthäus 17-20</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="66"></td></tr>
+            <tr><td>67</td><td>Psalm 39-46</td><td>8</td><td>Matthäus 21-24</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="67"></td></tr>
+            <tr><td>68</td><td>Psalm 47-54</td><td>8</td><td>Matthäus 25-28</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="68"></td></tr>
+            <tr><td>69</td><td>Psalm 55-62</td><td>8</td><td>Markus 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="69"></td></tr>
+            <tr><td>70</td><td>Psalm 63-70</td><td>8</td><td>Markus 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="70"></td></tr>
+            <tr><td>71</td><td>Psalm 71-78</td><td>8</td><td>Markus 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="71"></td></tr>
+            <tr><td>72</td><td>Psalm 79-86</td><td>8</td><td>Markus 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="72"></td></tr>
+            <tr><td>73</td><td>Psalm 87-94</td><td>8</td><td>Lukas 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="73"></td></tr>
+            <tr><td>74</td><td>Psalm 95-102</td><td>8</td><td>Lukas 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="74"></td></tr>
+            <tr><td>75</td><td>Psalm 103-110</td><td>8</td><td>Lukas 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="75"></td></tr>
+            <tr><td>76</td><td>Psalm 111-118</td><td>8</td><td>Lukas 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="76"></td></tr>
+            <tr><td>77</td><td>Psalm 119</td><td>1</td><td>Lukas 17-20</td><td>4</td><td>5</td><td><input type="checkbox" class="dayCheckbox" data-day="77"></td></tr>
+            <tr><td>78</td><td>Psalm 120-127</td><td>8</td><td>Lukas 21-24</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="78"></td></tr>
+            <tr><td>79</td><td>Psalm 128-135</td><td>8</td><td>Johannes 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="79"></td></tr>
+            <tr><td>80</td><td>Psalm 136-143</td><td>8</td><td>Johannes 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="80"></td></tr>
+            <tr><td>81</td><td>Psalm 144-150</td><td>7</td><td>Johannes 9-12</td><td>4</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="81"></td></tr>
+            <tr><td>82</td><td>Sprüche 1-8</td><td>8</td><td>Johannes 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="82"></td></tr>
+            <tr><td>83</td><td>Sprüche 9-16</td><td>8</td><td>Johannes 17-21</td><td>5</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="83"></td></tr>
+            <tr><td>84</td><td>Sprüche 17-24</td><td>8</td><td>Apostelgeschichte 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="84"></td></tr>
+            <tr><td>85</td><td>Sprüche 25-31</td><td>7</td><td>Apostelgeschichte 5-8</td><td>4</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="85"></td></tr>
+            <tr><td>86</td><td>Prediger 1-8</td><td>8</td><td>Apostelgeschichte 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="86"></td></tr>
+            <tr><td>87</td><td>Prediger 9 - Hohelied 8</td><td>8</td><td>Apostelgeschichte 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="87"></td></tr>
+            <tr><td>88</td><td>Jesaja 1-8</td><td>8</td><td>Apostelgeschichte 17-20</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="88"></td></tr>
+            <tr><td>89</td><td>Jesaja 9-16</td><td>8</td><td>Apostelgeschichte 21-24</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="89"></td></tr>
+            <tr><td>90</td><td>Jesaja 17-24</td><td>8</td><td>Apostelgeschichte 25-28</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="90"></td></tr>
+            <tr><td>91</td><td>Jesaja 25-32</td><td>8</td><td>Römer 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="91"></td></tr>
+            <tr><td>92</td><td>Jesaja 33-40</td><td>8</td><td>Römer 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="92"></td></tr>
+            <tr><td>93</td><td>Jesaja 41-48</td><td>8</td><td>Römer 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="93"></td></tr>
+            <tr><td>94</td><td>Jesaja 49-56</td><td>8</td><td>Römer 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="94"></td></tr>
+            <tr><td>95</td><td>Jesaja 57-64</td><td>8</td><td>1. Korinther 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="95"></td></tr>
+            <tr><td>96</td><td>Jesaja 65 - Jer 4</td><td>7</td><td>1. Korinther 5-8</td><td>4</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="96"></td></tr>
+            <tr><td>97</td><td>Jeremia 5-12</td><td>8</td><td>1. Korinther 9-12</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="97"></td></tr>
+            <tr><td>98</td><td>Jeremia 13-20</td><td>8</td><td>1. Korinther 13-16</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="98"></td></tr>
+            <tr><td>99</td><td>Jeremia 21-28</td><td>8</td><td>2. Korinther 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="99"></td></tr>
+            <tr><td>100</td><td>Jeremia 29-36</td><td>8</td><td>2. Korinther 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="100"></td></tr>
+            <tr><td>101</td><td>Jeremia 37-44</td><td>8</td><td>2. Korinther 9-13</td><td>5</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="101"></td></tr>
+            <tr><td>102</td><td>Jeremia 45-52</td><td>8</td><td>Galater 1-6</td><td>6</td><td>14</td><td><input type="checkbox" class="dayCheckbox" data-day="102"></td></tr>
+            <tr><td>103</td><td>Klagelieder 1-5</td><td>5</td><td>Epheser 1-6</td><td>6</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="103"></td></tr>
+            <tr><td>104</td><td>Hesekiel 1-8</td><td>8</td><td>Philipper 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="104"></td></tr>
+            <tr><td>105</td><td>Hesekiel 9-16</td><td>8</td><td>Kolosser 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="105"></td></tr>
+            <tr><td>106</td><td>Hesekiel 17-24</td><td>8</td><td>1. Thessalonicher 1-5</td><td>5</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="106"></td></tr>
+            <tr><td>107</td><td>Hesekiel 25-32</td><td>8</td><td>2. Thessalonicher 1-3</td><td>3</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="107"></td></tr>
+            <tr><td>108</td><td>Hesekiel 33-40</td><td>8</td><td>1. Timotheus 1-6</td><td>6</td><td>14</td><td><input type="checkbox" class="dayCheckbox" data-day="108"></td></tr>
+            <tr><td>109</td><td>Hesekiel 41-48</td><td>8</td><td>2. Timotheus 1-4</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="109"></td></tr>
+            <tr><td>110</td><td>Daniel 1-8</td><td>8</td><td>Titus 1-3</td><td>3</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="110"></td></tr>
+            <tr><td>111</td><td>Daniel 9-12 + Hosea 1-4</td><td>8</td><td>Philemon 1 + Hebräer 1-4</td><td>5</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="111"></td></tr>
+            <tr><td>112</td><td>Hosea 5-12</td><td>8</td><td>Hebräer 5-8</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="112"></td></tr>
+            <tr><td>113</td><td>Hosea 13 - Joel 3</td><td>6</td><td>Hebräer 9-12</td><td>4</td><td>10</td><td><input type="checkbox" class="dayCheckbox" data-day="113"></td></tr>
+            <tr><td>114</td><td>Amos 1-8</td><td>8</td><td>Hebräer 13 + Jakobus 1-3</td><td>5</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="114"></td></tr>
+            <tr><td>115+<td>115</td><td>Amos 9 - Jona 4</td><td>6</td><td>Jakobus 4-5 + 1. Petrus</td><td>5</td><td>11</td><td><input type="checkbox" class="dayCheckbox" data-day="115"></td></tr>
+            <tr><td>116</td><td>Micha 1-7</td><td>7</td><td>2. Petrus 1-3 + 1. Joh</td><td>6</td><td>13</td><td><input type="checkbox" class="dayCheckbox" data-day="116"></td></tr>
+            <tr><td>117</td><td>Nahum 1 - Habakuk 3</td><td>6</td><td>2. Joh - Judas + Off 1</td><td>4</td><td>10</td><td><input type="checkbox" class="dayCheckbox" data-day="117"></td></tr>
+            <tr><td>118</td><td>Zephanja 1 - Sach 6</td><td>8</td><td>Offenbarung 2-5</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="118"></td></tr>
+            <tr><td>119</td><td>Sacharja 7-14</td><td>8</td><td>Offenbarung 6-9</td><td>4</td><td>12</td><td><input type="checkbox" class="dayCheckbox" data-day="119"></td></tr>
+            <tr><td>120</td><td>Maleachi 1-4</td><td>4</td><td>Offenbarung 10-22</td><td>13</td><td>17</td><td><input type="checkbox" class="dayCheckbox" data-day="120"></td></tr>
+        </tbody>
+    </table>
+
+    <button onclick="resetPlan()">Plan zurücksetzen</button>
+
+    <h2>Hinweise</h2>
+    <ul>
+        <li><strong>Flexibilität:</strong> Manche Tage haben 10-14 Kapitel, da die Kapitel unterschiedlich lang sind (z. B. Psalm 119 ist sehr lang, andere sehr kurz). Passe die Lesezeit an deinen Rhythmus an.</li>
+        <li><strong>Kontrolle:</strong> Am Ende von Tag 31 bist du bei 1. Samuel 8 und Römer 8. Am Ende von Tag 61 bei Hiob 38 und Offenbarung 22 (NT 1x fertig). Am Ende bist du durch.</li>
+        <li><strong>Tipp:</strong> Du kannst AT und NT trennen (z. B. morgens AT, abends NT) oder zusammen lesen.</li>
+    </ul>
+
+    <script>
+        // Funktion zum Laden des gespeicherten Fortschritts
+        function loadProgress() {
+            const checkboxes = document.querySelectorAll('.dayCheckbox');
+            checkboxes.forEach(checkbox => {
+                const day = checkbox.getAttribute('data-day');
+                const isChecked = localStorage.getItem(`day${day}`) === 'true';
+                checkbox.checked = isChecked;
+                updateRowStyle(checkbox);
+            });
+        }
+
+        // Funktion zum Aktualisieren des Stils der Zeile
+        function updateRowStyle(checkbox) {
+            const row = checkbox.closest('tr');
+            if (checkbox.checked) {
+                row.classList.add('completed');
+            } else {
+                row.classList.remove('completed');
+            }
+        }
+
+        // Event-Listener für Checkboxen
+        document.querySelectorAll('.dayCheckbox').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const day = this.getAttribute('data-day');
+                localStorage.setItem(`day${day}`, this.checked);
+                updateRowStyle(this);
+            });
+        });
+
+        // Funktion zum Zurücksetzen des Plans
+        function resetPlan() {
+            if (confirm('Möchtest du den Plan wirklich zurücksetzen? Alle Checkboxen werden gelöscht.')) {
+                const checkboxes = document.querySelectorAll('.dayCheckbox');
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = false;
+                    const day = checkbox.getAttribute('data-day');
+                    localStorage.removeItem(`day${day}`);
+                    updateRowStyle(checkbox);
+                });
+            }
+        }
+
+        // Fortschritt beim Laden der Seite anzeigen
+        window.onload = loadProgress;
+    </script>
+</body>
+</html>
